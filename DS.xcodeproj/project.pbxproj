@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B4AF62C167FED2F00400A89 /* doubly_linked.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF627167FED2F00400A89 /* doubly_linked.h */; };
-		2B4AF62D167FED2F00400A89 /* node_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF628167FED2F00400A89 /* node_types.h */; };
-		2B4AF62E167FED2F00400A89 /* singly_linked.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF629167FED2F00400A89 /* singly_linked.h */; };
+		2B4AF62C167FED2F00400A89 /* doubly_linked.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF627167FED2F00400A89 /* doubly_linked.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B4AF62D167FED2F00400A89 /* node_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF628167FED2F00400A89 /* node_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B4AF62E167FED2F00400A89 /* singly_linked.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF629167FED2F00400A89 /* singly_linked.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B4AF62F167FED2F00400A89 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B4AF62A167FED2F00400A89 /* stack.c */; };
 		2B4AF630167FED2F00400A89 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF62B167FED2F00400A89 /* stack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B4AF649167FEE9100400A89 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B4AF648167FEE9100400A89 /* main.c */; };
@@ -250,6 +250,7 @@
 				GCC_VERSION = "";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /include/DS;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -261,6 +262,7 @@
 				GCC_VERSION = "";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /include/DS;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
