@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B32E9BD16847BC600D30AC4 /* slist.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B32E9BC16847BC600D30AC4 /* slist.c */; };
+		2B32E9BF16847BD900D30AC4 /* dlist.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B32E9BE16847BD900D30AC4 /* dlist.c */; };
+		2B32E9C116847BFA00D30AC4 /* clstist.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B32E9C016847BFA00D30AC4 /* clstist.c */; };
+		2B32E9C216847C0E00D30AC4 /* clstist.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B32E9C016847BFA00D30AC4 /* clstist.c */; };
+		2B32E9C316847C1300D30AC4 /* dlist.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B32E9BE16847BD900D30AC4 /* dlist.c */; };
+		2B32E9C416847C1B00D30AC4 /* slist.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B32E9BC16847BC600D30AC4 /* slist.c */; };
 		2B4AF62C167FED2F00400A89 /* doubly_linked.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF627167FED2F00400A89 /* doubly_linked.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B4AF62D167FED2F00400A89 /* node_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF628167FED2F00400A89 /* node_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B4AF62E167FED2F00400A89 /* singly_linked.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4AF629167FED2F00400A89 /* singly_linked.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +37,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B32E9BC16847BC600D30AC4 /* slist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slist.c; sourceTree = "<group>"; };
+		2B32E9BE16847BD900D30AC4 /* dlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dlist.c; sourceTree = "<group>"; };
+		2B32E9C016847BFA00D30AC4 /* clstist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = clstist.c; sourceTree = "<group>"; };
 		2B4AF616167FEC4300400A89 /* libDS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4AF627167FED2F00400A89 /* doubly_linked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = doubly_linked.h; sourceTree = "<group>"; };
 		2B4AF628167FED2F00400A89 /* node_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node_types.h; sourceTree = "<group>"; };
@@ -64,6 +73,9 @@
 		2B4AF60B167FEC4300400A89 = {
 			isa = PBXGroup;
 			children = (
+				2B32E9C016847BFA00D30AC4 /* clstist.c */,
+				2B32E9BE16847BD900D30AC4 /* dlist.c */,
+				2B32E9BC16847BC600D30AC4 /* slist.c */,
 				2B4AF627167FED2F00400A89 /* doubly_linked.h */,
 				2B4AF628167FED2F00400A89 /* node_types.h */,
 				2B4AF629167FED2F00400A89 /* singly_linked.h */,
@@ -177,6 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B4AF62F167FED2F00400A89 /* stack.c in Sources */,
+				2B32E9BD16847BC600D30AC4 /* slist.c in Sources */,
+				2B32E9BF16847BD900D30AC4 /* dlist.c in Sources */,
+				2B32E9C116847BFA00D30AC4 /* clstist.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +199,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B32E9C416847C1B00D30AC4 /* slist.c in Sources */,
+				2B32E9C316847C1300D30AC4 /* dlist.c in Sources */,
+				2B32E9C216847C0E00D30AC4 /* clstist.c in Sources */,
 				2B4AF650167FF09600400A89 /* stack.c in Sources */,
 				2B4AF649167FEE9100400A89 /* main.c in Sources */,
 			);
@@ -247,11 +265,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
-				GCC_VERSION = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = /include/DS;
-				SKIP_INSTALL = YES;
+				SDKROOT = "";
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -259,11 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
-				GCC_VERSION = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = /include/DS;
-				SKIP_INSTALL = YES;
+				SDKROOT = "";
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};

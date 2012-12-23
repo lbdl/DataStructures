@@ -5,6 +5,10 @@
 //  Copyright (c) 2012 Tim Storey. All rights reserved.
 //
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifndef NODE_TYPES__H
 #define NODE_TYPES__H
 
@@ -24,4 +28,8 @@ typedef struct stack{
     S_LIST_NODE *head;
 }STACKPTR;
 
+#endif
+
+#ifdef __cplusplus
+}
 #endif
