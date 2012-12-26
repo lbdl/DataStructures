@@ -26,11 +26,17 @@ STACKPTR* allocStack(){
 }
 
 void destroyStack(STACKPTR *sptr){
+    //need to iterate through the stack and free any data pointers as well
+    //pre freeing the head node
     free(sptr->head);
     free(sptr);
 }
 
 S_LIST_NODE* getnode(STACKPTR *ptr){
+    //could be more efficient as it may well be slow to malloc every
+    //node as required, might make more sense to do a block memory
+    //allocation at instatioation time and then do a fibonacci malloc
+    //when the stack is full
     S_LIST_NODE *tmp;
     tmp = (S_LIST_NODE*)malloc(sizeof(S_LIST_NODE));
     return tmp;
@@ -51,7 +57,9 @@ int push(STACKPTR *s, void *ele){
     S_LIST_NODE *t;
     
     //need proper exception handling
-    c = getnode(s);
+    if( !(c = getnode(s)) ){
+        return -10;
+    }
     
     c->data = ele;
     
